@@ -1,57 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#172f4b">
-  <meta name="description" content="Manos a la Obra: encuentra profesionales para pintura, plomería, electricidad y más servicios del hogar.">
+  <meta name="description"
+    content="Manos a la Obra: encuentra profesionales para pintura, plomería, electricidad y más servicios del hogar.">
   <title>Manos a la Obra | Servicios para tu hogar</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <header class="site-header" id="inicio">
     <div class="header-inner">
       <a href="#inicio" class="brand" aria-label="Manos a la Obra, ir al inicio">
         <span class="brand-icon" aria-hidden="true">
           <svg viewBox="0 0 58 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="m4 26 25-21 25 21" stroke="#FFCE5C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M11 25v24h36V25L29 10 11 25Z" fill="#FFCE5C"/>
-            <path d="M23 49V34a6 6 0 0 1 12 0v15" fill="#17334F"/>
-            <path d="M39 14V7h7v13" fill="#FFCE5C"/>
-            <path d="M26 25a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z" fill="#17334F"/>
+            <path d="m4 26 25-21 25 21" stroke="#FFCE5C" stroke-width="7" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M11 25v24h36V25L29 10 11 25Z" fill="#FFCE5C" />
+            <path d="M23 49V34a6 6 0 0 1 12 0v15" fill="#17334F" />
+            <path d="M39 14V7h7v13" fill="#FFCE5C" />
+            <path d="M26 25a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z" fill="#17334F" />
           </svg>
         </span>
-        <span class="brand-text"><strong>Manos a la Obra</strong><small>Servicios que hacen tu vida más fácil</small></span>
+        <span class="brand-text">
+          <strong>Manos a la Obra</strong>
+          <small>Servicios que hacen tu vida más fácil</small>
+        </span>
       </a>
 
       <nav class="desktop-nav" aria-label="Navegación principal">
         <a class="nav-link is-active" href="#inicio">Inicio</a>
         <a class="nav-link" href="#servicios">Servicios</a>
-        <a class="nav-link" href="#profesionales">Nuestros Profesionales</a>
+        <a class="nav-link" href="nuestros-profesionales/profesionales.html">Nuestros Profesionales</a>
         <a class="nav-link" href="#nosotros">Sobre Nosotros</a>
       </nav>
 
       <div class="header-actions">
         <form class="site-search" id="search-form" role="search" aria-label="Buscar servicios">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg>
-          <input id="search-input" type="search" placeholder="Buscar servicios..." aria-label="Buscar por servicio o profesional" autocomplete="off">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.5" />
+            <path d="m16 16 5 5" />
+          </svg>
+          <input id="search-input" type="search" placeholder="Buscar servicios..."
+            aria-label="Buscar por servicio o profesional" autocomplete="off">
         </form>
+
         <button class="login-button" type="button" data-pending="iniciar sesión">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2c0-4 3.5-6 8-6s8 2 8 6v2"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="12" cy="7" r="4" />
+            <path d="M4 21v-2c0-4 3.5-6 8-6s8 2 8 6v2" />
+          </svg>
           <span>Iniciar sesión</span>
         </button>
-        <button class="register-button" type="button" data-pending="registrarse">Registrarse</button>
+
+        <button class="register-button" type="button" data-pending="registrarse">
+          Registrarse
+        </button>
       </div>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-controls="mobile-menu"
+        aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
+
     <nav class="mobile-menu" id="mobile-menu" aria-label="Menú móvil" hidden>
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
-      <a href="#profesionales">Nuestros Profesionales</a>
+      <a href="nuestros-profesionales/profesionales.html">Nuestros Profesionales</a>
       <a href="#nosotros">Sobre Nosotros</a>
+
       <div class="mobile-auth">
         <button type="button" data-pending="iniciar sesión">Iniciar sesión</button>
         <button type="button" data-pending="registrarse">Registrarse</button>
@@ -60,89 +85,222 @@
   </header>
 
   <main>
+
+    <!-- Sección principal -->
     <section class="hero-section" aria-labelledby="hero-title">
       <div class="hero-content">
         <span class="hero-eyebrow">SERVICIOS PARA EL HOGAR</span>
         <h1 id="hero-title">Tu hogar, en buenas manos</h1>
         <p>Encuentra profesionales confiables para todo lo que necesitas.</p>
         <p>Desde chapear hasta pintar techos, ¡tenemos el servicio perfecto para ti!</p>
-        <a class="hero-cta" href="#servicios">Ver todos los servicios <span aria-hidden="true">→</span></a>
+        <a class="hero-cta" href="#servicios">
+          Ver todos los servicios <span aria-hidden="true">→</span>
+        </a>
       </div>
+
       <div class="hero-highlights" aria-label="Beneficios de la plataforma">
         <div class="hero-highlight">
           <span class="hero-highlight-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 8 3v6.1c0 5.2-3.1 8.7-8 10.9-4.9-2.2-8-5.7-8-10.9V5l8-3Zm-1 13.8 5.5-6-1.5-1.4-4 4.3-2-1.9-1.4 1.4 3.4 3.6Z"/></svg>
-          </span><span>Profesionales<br>verificados</span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="m12 2 8 3v6.1c0 5.2-3.1 8.7-8 10.9-4.9-2.2-8-5.7-8-10.9V5l8-3Zm-1 13.8 5.5-6-1.5-1.4-4 4.3-2-1.9-1.4 1.4 3.4 3.6Z" />
+            </svg>
+          </span>
+          <span>Profesionales<br>verificados</span>
         </div>
+
         <div class="hero-highlight">
-          <span class="hero-highlight-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 7 1-5.1 5 .9 7-5.9-3.2-6 3.2 1-7-5-5 7-1L12 2Z"/></svg></span>
+          <span class="hero-highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="m12 2 3.1 6.3 7 1-5.1 5 .9 7-5.9-3.2-6 3.2 1-7-5-5 7-1L12 2Z" />
+            </svg>
+          </span>
           <span>Reseñas reales</span>
         </div>
+
         <div class="hero-highlight">
-          <span class="hero-highlight-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 8 3v6.2c0 5.1-3.2 8.8-8 10.8-4.8-2-8-5.7-8-10.8V5l8-3Zm0 5a3 3 0 0 0-3 3v1H8v6h8v-6h-1v-1a3 3 0 0 0-3-3Zm-1 4v-1a1 1 0 0 1 2 0v1h-2Z"/></svg></span>
+          <span class="hero-highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="m12 2 8 3v6.2c0 5.1-3.2 8.8-8 10.8-4.8-2-8-5.7-8-10.8V5l8-3Zm0 5a3 3 0 0 0-3 3v1H8v6h8v-6h-1v-1a3 3 0 0 0-3-3Zm-1 4v-1a1 1 0 0 1 2 0v1h-2Z" />
+            </svg>
+          </span>
           <span>Pagos seguros</span>
         </div>
       </div>
     </section>
 
+    <!-- Categorías -->
     <section class="categories-section section-wrap" id="servicios" aria-labelledby="categories-title">
+
       <div class="section-heading">
         <h2 id="categories-title">Nuestros servicios</h2>
         <p>Selecciona la categoría que necesitas</p>
       </div>
+
       <div class="category-grid" role="group" aria-label="Filtrar por categoría">
-        <button class="category-card" type="button" data-category="Chapear" aria-pressed="false"><span class="category-emoji" aria-hidden="true">🌾</span><span>Chapear</span></button>
-        <button class="category-card" type="button" data-category="Pintura" aria-pressed="false"><span class="category-emoji" aria-hidden="true">🖌️</span><span>Pintura</span></button>
-        <button class="category-card" type="button" data-category="Plomería" aria-pressed="false"><span class="category-emoji" aria-hidden="true">💧</span><span>Plomería</span></button>
-        <button class="category-card" type="button" data-category="Electricidad" aria-pressed="false"><span class="category-emoji" aria-hidden="true">⚡</span><span>Electricidad</span></button>
-        <button class="category-card" type="button" data-category="Limpieza" aria-pressed="false"><span class="category-emoji" aria-hidden="true">🧴</span><span>Limpieza</span></button>
-        <button class="category-card" type="button" data-category="Carpintería" aria-pressed="false"><span class="category-emoji" aria-hidden="true">🔨</span><span>Carpintería</span></button>
-        <button class="category-card" type="button" data-category="Jardinería" aria-pressed="false"><span class="category-emoji" aria-hidden="true">🌱</span><span>Jardinería</span></button>
-        <button class="category-card" type="button" data-category="Otros" aria-pressed="false"><span class="category-emoji others-icon" aria-hidden="true">•••</span><span>Otros</span></button>
+        <button class="category-card" type="button" data-category="Chapear" aria-pressed="false">
+          <span class="category-emoji" aria-hidden="true">🌾</span>
+          <span>Chapear</span>
+        </button>
+
+        <button class="category-card" type="button" data-category="Pintura" aria-pressed="false">
+          <span class="category-emoji" aria-hidden="true">🖌️</span>
+          <span>Pintura</span>
+        </button>
+
+        <button class="category-card" type="button" data-category="Plomería" aria-pressed="false">
+          <span class="category-emoji" aria-hidden="true">💧</span>
+          <span>Plomería</span>
+        </button>
+
+        <button class="category-card" type="button" data-category="Electricidad" aria-pressed="false">
+          <span class="category-emoji" aria-hidden="true">⚡</span>
+          <span>Electricidad</span>
+        </button>
+
+        <button class="category-card" type="button" data-category="Limpieza" aria-pressed="false">
+          <span class="category-emoji" aria-hidden="true">🧴</span>
+          <span>Limpieza</span>
+        </button>
+
+        <button class="category-card" type="button" data-category="Carpintería" aria-pressed="false">
+          <span class="category-emoji" aria-hidden="true">🔨</span>
+          <span>Carpintería</span>
+        </button>
+
+        <button class="category-card" type="button" data-category="Jardinería" aria-pressed="false">
+          <span class="category-emoji" aria-hidden="true">🌱</span>
+          <span>Jardinería</span>
+        </button>
+
+        <button class="category-card" type="button" data-category="Otros" aria-pressed="false">
+          <span class="category-emoji others-icon" aria-hidden="true">•••</span>
+          <span>Otros</span>
+        </button>
       </div>
     </section>
 
+    <!-- Servicios destacados -->
     <section class="featured-section" id="profesionales" aria-labelledby="featured-title">
       <div class="section-wrap">
+
         <div class="featured-header">
           <div>
             <h2 id="featured-title">Servicios destacados</h2>
             <p class="results-count" id="results-count" aria-live="polite"></p>
           </div>
-          <button id="show-all" class="all-services-link" type="button">Ver todos los servicios <span aria-hidden="true">→</span></button>
+
+          <button id="show-all" class="all-services-link" type="button">
+            Ver todos los servicios
+            <span aria-hidden="true">→</span>
+          </button>
         </div>
-        <div class="active-filter" id="active-filter" hidden><span id="filter-label"></span><button type="button" id="clear-filter" aria-label="Quitar filtros">×</button></div>
+
+        <div class="active-filter" id="active-filter" hidden>
+          <span id="filter-label"></span>
+          <button type="button" id="clear-filter" aria-label="Quitar filtros">×</button>
+        </div>
+
         <div class="services-grid" id="services-grid" aria-live="polite"></div>
+
         <div class="empty-state" id="empty-state" hidden>
           <div class="empty-icon" aria-hidden="true">⌕</div>
           <h3>No encontramos servicios con esos filtros</h3>
           <p>Prueba otra búsqueda o selecciona una categoría diferente.</p>
-          <button class="reset-button" type="button" id="empty-reset">Ver todos los servicios</button>
+          <button class="reset-button" type="button" id="empty-reset">
+            Ver todos los servicios
+          </button>
         </div>
+
       </div>
     </section>
 
+    <!-- Sobre nosotros -->
     <section class="trust-section" id="nosotros" aria-label="Acerca de la plataforma">
       <div class="trust-grid section-wrap">
-        <div class="trust-item"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8.6-.9a4 4 0 1 0-1.3-7.9 5.8 5.8 0 0 1 1.3 7.9ZM8 13c-4.4 0-7 2.3-7 6v2h14v-2c0-3.7-2.6-6-7-6Zm9-1c-.8 0-1.5.1-2.2.3 1.5 1.5 2.2 3.5 2.2 5.8V21h6v-3c0-3.7-2.2-6-6-6Z"/></svg></div><div><h3>Profesionales verificados</h3><p>Una plataforma diseñada para conectar clientes con especialistas.</p></div></div>
-        <div class="trust-item"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 1 3.4 6.9L23 9l-5.5 5.4 1.3 7.6-6.8-3.6L5.2 22l1.3-7.6L1 9l7.6-1.1L12 1Z"/></svg></div><div><h3>Reseñas reales</h3><p>Conoce la experiencia de otros clientes antes de contratar.</p></div></div>
-        <div class="trust-item"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 1 9 4v6c0 6-3.5 9.7-9 12-5.5-2.3-9-6-9-12V5l9-4Zm0 5a3 3 0 0 0-3 3v1H8v7h8v-7h-1V9a3 3 0 0 0-3-3Zm-1 4V9a1 1 0 0 1 2 0v1h-2Z"/></svg></div><div><h3>Pagos seguros</h3><p>Funcionalidad contemplada para una próxima etapa del proyecto.</p></div></div>
-        <div class="trust-item"><div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 15V12a9 9 0 0 1 18 0v3M3 15h3v6H4a2 2 0 0 1-2-2v-2a2 2 0 0 1 1-2Zm18 0h-3v6h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-1-2Z"/><path d="M18 21c0 1.5-2 2-4 2h-2"/></svg></div><div><h3>Soporte al cliente</h3><p>Un espacio pensado para acompañarte al buscar un servicio.</p></div></div>
+
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8.6-.9a4 4 0 1 0-1.3-7.9 5.8 5.8 0 0 1 1.3 7.9ZM8 13c-4.4 0-7 2.3-7 6v2h14v-2c0-3.7-2.6-6-7-6Zm9-1c-.8 0-1.5.1-2.2.3 1.5 1.5 2.2 3.5 2.2 5.8V21h6v-3c0-3.7-2.6-6-6-6Z" />
+            </svg>
+          </div>
+          <div>
+            <h3>Profesionales verificados</h3>
+            <p>Una plataforma diseñada para conectar clientes con especialistas.</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="m12 1 3.4 6.9L23 9l-5.5 5.4 1.3 7.6-6.8-3.6L5.2 22l1.3-7.6L1 9l7.6-1.1L12 1Z" />
+            </svg>
+          </div>
+          <div>
+            <h3>Reseñas reales</h3>
+            <p>Conoce la experiencia de otros clientes antes de contratar.</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="m12 1 9 4v6c0 6-3.5 9.7-9 12-5.5-2.3-9-6-9-12V5l9-4Zm0 5a3 3 0 0 0-3 3v1H8v7h8v-7h-1V9a3 3 0 0 0-3-3Zm-1 4v-1a1 1 0 0 1 2 0v1h-2Z" />
+            </svg>
+          </div>
+          <div>
+            <h3>Pagos seguros</h3>
+            <p>Funcionalidad contemplada para una próxima etapa del proyecto.</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path
+                d="M3 15V12a9 9 0 0 1 18 0v3M3 15h3v6H4a2 2 0 0 0-2 2v-2a2 2 0 0 1 1-2Zm18 0h-3v6h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-1-2Z" />
+              <path d="M18 21c0 1.5-2 2-4 2h-2" />
+            </svg>
+          </div>
+          <div>
+            <h3>Soporte al cliente</h3>
+            <p>Un espacio pensado para acompañarte al buscar un servicio.</p>
+          </div>
+        </div>
+
       </div>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner section-wrap">
-      <a href="#inicio" class="footer-brand" aria-label="Volver al inicio"><span aria-hidden="true">⌂</span> Manos a la Obra</a>
-      <nav aria-label="Navegación del pie de página"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#profesionales">Nuestros Profesionales</a><a href="#nosotros">Sobre Nosotros</a></nav>
+      <a href="#inicio" class="footer-brand" aria-label="Volver al inicio">
+        <span aria-hidden="true">⌂</span> Manos a la Obra
+      </a>
+
+      <nav aria-label="Navegación del pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="nuestros-profesionales/profesionales.html">Nuestros Profesionales</a>
+        <a href="#nosotros">Sobre Nosotros</a>
+      </nav>
+
       <span class="footer-copy">© 2026 Manos a la Obra. Proyecto académico.</span>
     </div>
   </footer>
 
+  <!-- Ventana de perfil -->
   <dialog id="profile-dialog" class="profile-dialog" aria-labelledby="dialog-name">
     <button class="dialog-close" id="profile-close" type="button" aria-label="Cerrar perfil">×</button>
     <div id="profile-content"></div>
   </dialog>
+
 </body>
+
 </html>
