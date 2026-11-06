@@ -116,13 +116,4 @@ profileModal.addEventListener("show.bs.modal", event => {
 });
 
 
-document.querySelectorAll("#menu-principal .nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    const menu = document.getElementById("menu-principal");
-    if (window.innerWidth < 992 && window.bootstrap) {
-      bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false }).hide();
-    }
-  });
-});
-
 renderServices();
