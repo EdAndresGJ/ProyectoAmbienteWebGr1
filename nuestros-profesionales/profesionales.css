@@ -1,0 +1,324 @@
+
+
+.pagina-profesionales {
+    background-color: #f5f8fc;
+    color: #18314c;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra de navegación */
+
+.pagina-profesionales .header-inner {
+    min-height: 75px;
+}
+
+.np-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.np-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.np-nav a:hover,
+.np-nav a[aria-current="page"] {
+    color: #ffcb58;
+}
+
+/* Contenido principal */
+
+.np-main {
+    min-height: 75vh;
+}
+
+.np-intro {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.np-intro h1 {
+    color: #17314e;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.np-intro p {
+    color: #64758a;
+    font-size: 15px;
+}
+
+.np-busqueda {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e6ebf1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.np-busqueda .form-label {
+    font-weight: bold;
+    color: #17314e;
+    font-size: 13px;
+}
+
+.np-busqueda .form-control,
+.np-busqueda .form-select {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+.pagina-profesionales .btn-primary {
+    background-color: #17314e;
+    border-color: #17314e;
+    color: white;
+}
+
+.pagina-profesionales .btn-primary:hover {
+    background-color: #1b466b;
+    border-color: #1b466b;
+    color: white;
+}
+
+.pagina-profesionales .btn-warning {
+    background-color: #ffcb58;
+    border-color: #ffcb58;
+    color: #17314e;
+    font-weight: bold;
+}
+
+.pagina-profesionales .btn-warning:hover {
+    background-color: #f5b938;
+    border-color: #f5b938;
+    color: #17314e;
+}
+
+
+.np-card {
+    background-color: white;
+    border: 1px solid #e6ebf1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.np-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.np-card-imagen {
+    height: 150px;
+    background-color: #e8f0f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+}
+
+.np-card-contenido {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 150px);
+}
+
+.np-card-nombre {
+    font-size: 19px;
+    color: #17314e;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.np-card-especialidad {
+    color: #1b466b;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.np-card-ubicacion {
+    color: #64758a;
+    font-size: 13px;
+}
+
+.np-card-descripcion {
+    color: #53677b;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.np-card .btn-primary {
+    margin-top: auto;
+}
+
+
+/* Contenedor de los botones administrativos */
+
+.np-card .d-flex.gap-2 {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* Botón Editar */
+
+.np-card .btn-warning {
+    background-color: #ffcb58;
+    border: 1px solid #ffcb58;
+    color: #17314e;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 9px 12px;
+    border-radius: 6px;
+}
+
+.np-card .btn-warning:hover {
+    background-color: #f5b938;
+    border-color: #f5b938;
+}
+
+/* Botón Eliminar */
+
+.np-card .btn-danger {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 9px 12px;
+    border-radius: 6px;
+}
+
+.np-card .btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
+
+/* Distribución de los botones */
+
+.np-card .btn-warning,
+.np-card .btn-danger {
+    flex: 1;
+}
+
+
+
+#cantidadResultados {
+    color: #64758a;
+    font-size: 13px;
+}
+
+.np-sin-resultados {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #e6ebf1;
+    padding: 30px;
+    border-radius: 8px;
+    color: #64758a;
+}
+
+
+.np-registro-invitacion {
+    background-color: #17314e;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.np-registro-invitacion h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.np-registro-invitacion p {
+    color: #d2dde9;
+}
+
+.np-registro-invitacion .btn {
+    white-space: nowrap;
+}
+
+
+.np-dialog {
+    width: 90%;
+    max-width: 520px;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    position: fixed;
+}
+
+.np-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.np-dialog h2 {
+    color: #17314e;
+    font-weight: bold;
+}
+
+.np-dialog p {
+    color: #53677b;
+}
+
+/* Botón de cerrar ventana */
+
+.np-cerrar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #17314e;
+    cursor: pointer;
+}
+
+.np-cerrar:hover {
+    color: #d9534f;
+}
+
+/* Campos del formulario */
+
+.np-dialog .form-label {
+    color: #17314e;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.np-dialog .form-control,
+.np-dialog .form-select {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
+
+.np-dialog .form-control:focus,
+.np-dialog .form-select:focus {
+    border-color: #1b466b;
+    box-shadow: 0 0 0 3px rgba(27, 70, 107, 0.15);
+}
+
+/* Nota informativa */
+
+.np-aviso {
+    font-size: 12px;
+    color: #64758a;
+    background-color: #f5f8fc;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+

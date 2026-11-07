@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Profesionales | Manos a la Obra</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="profesionales.css">
+
+    <!-- JavaScript -->
+    <script src="profesionales.js" defer></script>
+</head>
+
+<body class="pagina-profesionales">
+
+    <!-- Barra de navegación -->
+
+    <!-- Barra de navegación -->
+    <header id="inicio" class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+            <div class="container-fluid section-wrap px-0">
+
+                <a class="navbar-brand brand d-flex align-items-center gap-2 m-0" href="../index.html#inicio"
+                    aria-label="Manos a la Obra, ir al inicio">
+
+                    <span class="brand-icon" aria-hidden="true">
+                        <svg viewBox="0 0 58 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m4 26 25-21 25 21" stroke="#FFCE5C" stroke-width="7" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M11 25v24h36V25L29 10 11 25Z" fill="#FFCE5C" />
+                            <path d="M23 49V34a6 6 0 0 1 12 0v15" fill="#17334F" />
+                            <path d="M39 14V7h7v13" fill="#FFCE5C" />
+                            <path d="M26 25a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z" fill="#17334F" />
+                        </svg>
+                    </span>
+
+                    <span class="brand-text">
+                        <strong>Manos a la Obra</strong>
+                        <small>Servicios que hacen tu vida más fácil</small>
+                    </span>
+                </a>
+
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false"
+                    aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu-principal">
+
+                    <ul class="navbar-nav mx-lg-auto align-items-lg-center nav-links gap-lg-2 gap-xxl-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="profesionales.html">Nuestros
+                                Profesionales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#nosotros">Sobre Nosotros</a>
+                        </li>
+                    </ul>
+
+                    <div
+                        class="header-actions d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 gap-xl-3 mt-3 mt-lg-0">
+
+                        <form class="site-search d-flex align-items-center" action="../index.html" method="get"
+                            role="search" aria-label="Buscar servicios">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="10.8" cy="10.8" r="6.5" />
+                                <path d="m16 16 5 5" />
+                            </svg>
+                            <input class="form-control" type="search" placeholder="Buscar servicios..."
+                                aria-label="Buscar servicios" disabled>
+                        </form>
+
+                        <button class="btn btn-login text-nowrap" type="button" disabled
+                            aria-label="Iniciar sesión (opción no disponible)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                aria-hidden="true">
+                                <circle cx="12" cy="7" r="4" />
+                                <path d="M4 21v-2c0-4 3.5-6 8-6s8 2 8 6v2" />
+                            </svg>
+                            Iniciar sesión
+                        </button>
+
+                        <button class="btn btn-gold text-nowrap" type="button" disabled
+                            aria-label="Registrarse (opción no disponible)">
+                            Registrarse
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="np-main container py-5">
+
+        <!-- Presentación -->
+        <section class="np-intro mb-4">
+            <h1 id="titulo-profesionales">Nuestros Profesionales</h1>
+            <p>Encuentra personas que pueden ayudarte con pintura, plomería, electricidad y más.</p>
+        </section>
+
+        <!-- Buscador de profesionales -->
+        <section class="np-busqueda mb-4">
+            <div class="row g-3 align-items-end">
+
+                <div class="col-12 col-md-6">
+                    <label class="form-label" for="buscarProfesional">
+                        Nombre, especialidad o ubicación
+                    </label>
+                    <input class="form-control" type="search" id="buscarProfesional"
+                        placeholder="Ej. electricista o Cartago">
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <label class="form-label" for="filtrarEspecialidad">
+                        Especialidad
+                    </label>
+
+                    <select class="form-select" id="filtrarEspecialidad">
+                        <option value="">Todas</option>
+                        <option value="Chapear">Chapear</option>
+                        <option value="Pintura">Pintura</option>
+                        <option value="Plomería">Plomería</option>
+                        <option value="Electricidad">Electricidad</option>
+                        <option value="Limpieza">Limpieza</option>
+                        <option value="Carpintería">Carpintería</option>
+                        <option value="Jardinería">Jardinería</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-3 d-flex gap-2">
+                    <button class="btn btn-primary flex-fill" id="btnBuscarProfesional" type="button">
+                        Buscar
+                    </button>
+
+                    <button class="btn btn-outline-secondary" id="btnLimpiarBusqueda" type="button">
+                        Limpiar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listado de profesionales -->
+        <section>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <h2 class="h4 m-0">Profesionales disponibles</h2>
+                <span id="cantidadResultados" aria-live="polite"></span>
+            </div>
+
+            <div class="row g-4" id="listaProfesionales"></div>
+
+            <p class="np-sin-resultados mt-4" id="sinResultados" hidden>
+                No encontramos profesionales con esos filtros.
+            </p>
+        </section>
+
+        <!-- Registro de profesionales -->
+        <section class="np-registro-invitacion mt-5">
+            <div>
+                <h2 class="h4">¿Quieres ofrecer tus servicios?</h2>
+                <p class="mb-0">
+                    Completa el formulario para aparecer en el listado de demostración.
+                </p>
+            </div>
+
+            <button class="btn btn-warning" id="btnRegistroProfesional" type="button">
+                Registrarse como profesional
+            </button>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <div class="container py-4 d-flex justify-content-between flex-wrap gap-2">
+            <strong>Manos a la Obra</strong>
+            <span>© 2026. Proyecto académico.</span>
+        </div>
+    </footer>
+
+    <!-- Ventana de información del profesional -->
+    <dialog id="dialogPerfil" class="np-dialog">
+        <button class="np-cerrar" type="button" id="cerrarPerfil" aria-label="Cerrar">×</button>
+
+        <h2 id="tituloPerfil" class="h4"></h2>
+        <p id="especialidadPerfil"></p>
+        <p id="ubicacionPerfil"></p>
+        <p id="descripcionPerfil"></p>
+        <p id="telefonoPerfil"></p>
+    </dialog>
+
+    <!-- Ventana de registro -->
+    <dialog id="dialogRegistro" class="np-dialog">
+        <button class="np-cerrar" type="button" id="cerrarRegistro" aria-label="Cerrar">×</button>
+
+        <h2 class="h4 mb-3">Registro de profesional</h2>
+
+        <form id="formRegistroProfesional">
+
+            <div class="mb-3">
+                <label class="form-label" for="nombreRegistro">
+                    Nombre completo
+                </label>
+                <input class="form-control" id="nombreRegistro" type="text" maxlength="80" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="especialidadRegistro">
+                    Especialidad
+                </label>
+                <select class="form-select" id="especialidadRegistro" required>
+                    <option value="">Seleccione una especialidad</option>
+                    <option>Chapear</option>
+                    <option>Pintura</option>
+                    <option>Plomería</option>
+                    <option>Electricidad</option>
+                    <option>Limpieza</option>
+                    <option>Carpintería</option>
+                    <option>Jardinería</option>
+                    <option>Otros</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="ubicacionRegistro">
+                    Ubicación
+                </label>
+                <input class="form-control" id="ubicacionRegistro" type="text" maxlength="80" placeholder="Ej. San José"
+                    required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="telefonoRegistro">
+                    Teléfono
+                </label>
+                <input class="form-control" id="telefonoRegistro" type="tel" maxlength="20" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="correoRegistro">
+                    Correo electrónico
+                </label>
+                <input class="form-control" id="correoRegistro" type="email" maxlength="120" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="descripcionRegistro">
+                    Descripción de tus servicios
+                </label>
+                <textarea class="form-control" id="descripcionRegistro" rows="3" maxlength="300" required></textarea>
+            </div>
+
+            <p class="np-aviso">
+                Demostración frontend: los datos se guardan únicamente
+                en este navegador. No uses información personal real.
+            </p>
+
+            <button class="btn btn-primary w-100" type="submit">
+                Completar registro
+            </button>
+        </form>
+    </dialog>
+
+</body>
+
+</html>
