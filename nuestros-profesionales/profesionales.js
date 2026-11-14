@@ -1,4 +1,3 @@
-
 // Profesionales de ejemplo
 const profesionalesIniciales = [
     {
@@ -102,6 +101,11 @@ const cerrarRegistro = document.getElementById("cerrarRegistro");
 const btnRegistroProfesional = document.getElementById("btnRegistroProfesional");
 const formRegistroProfesional = document.getElementById("formRegistroProfesional");
 
+// Campos del formulario de registro
+const inputNombre = document.getElementById("nombreRegistro");
+const inputUbicacion = document.getElementById("ubicacionRegistro");
+const inputTelefono = document.getElementById("telefonoRegistro");
+
 // Guarda el ID del profesional que estamos editando
 let idProfesionalEditando = null;
 
@@ -186,7 +190,7 @@ function mostrarProfesionales(lista) {
 
     sinResultados.hidden = lista.length > 0;
 
-    lista.forEach(function(profesional) {
+    lista.forEach(function (profesional) {
 
         // Columna Bootstrap
         const columna = document.createElement("div");
@@ -240,7 +244,7 @@ function mostrarProfesionales(lista) {
 
         btnPerfil.type = "button";
 
-        btnPerfil.addEventListener("click", function() {
+        btnPerfil.addEventListener("click", function () {
             mostrarPerfil(profesional);
         });
 
@@ -251,7 +255,7 @@ function mostrarProfesionales(lista) {
         contenido.appendChild(btnPerfil);
 
         // Comprobar si fue registrado por el formulario
-        const estaRegistrado = profesionalesRegistrados.some(function(p) {
+        const estaRegistrado = profesionalesRegistrados.some(function (p) {
             return p.id === profesional.id;
         });
 
@@ -270,7 +274,7 @@ function mostrarProfesionales(lista) {
 
             btnEditar.type = "button";
 
-            btnEditar.addEventListener("click", function() {
+            btnEditar.addEventListener("click", function () {
                 editarProfesional(profesional);
             });
 
@@ -283,7 +287,7 @@ function mostrarProfesionales(lista) {
 
             btnEliminar.type = "button";
 
-            btnEliminar.addEventListener("click", function() {
+            btnEliminar.addEventListener("click", function () {
                 eliminarProfesional(profesional.id);
             });
 
@@ -308,7 +312,7 @@ function buscarProfesionales() {
     const texto = buscarProfesional.value.toLowerCase().trim();
     const especialidad = filtrarEspecialidad.value;
 
-    const resultados = profesionales.filter(function(profesional) {
+    const resultados = profesionales.filter(function (profesional) {
 
         const coincideTexto =
             profesional.nombre.toLowerCase().includes(texto) ||
@@ -331,7 +335,7 @@ buscarProfesional.addEventListener("input", buscarProfesionales);
 filtrarEspecialidad.addEventListener("change", buscarProfesionales);
 
 // Limpiar búsqueda
-btnLimpiarBusqueda.addEventListener("click", function() {
+btnLimpiarBusqueda.addEventListener("click", function () {
 
     buscarProfesional.value = "";
     filtrarEspecialidad.value = "";
@@ -361,7 +365,7 @@ function mostrarPerfil(profesional) {
     dialogPerfil.showModal();
 }
 
-cerrarPerfil.addEventListener("click", function() {
+cerrarPerfil.addEventListener("click", function () {
     dialogPerfil.close();
 });
 
@@ -382,14 +386,14 @@ function prepararRegistro() {
 }
 
 // Abrir registro
-btnRegistroProfesional.addEventListener("click", function() {
+btnRegistroProfesional.addEventListener("click", function () {
 
     prepararRegistro();
     dialogRegistro.showModal();
 });
 
 // Cerrar registro
-cerrarRegistro.addEventListener("click", function() {
+cerrarRegistro.addEventListener("click", function () {
 
     idProfesionalEditando = null;
     dialogRegistro.close();
@@ -442,7 +446,7 @@ function eliminarProfesional(id) {
 
     // Eliminar del arreglo
     profesionalesRegistrados = profesionalesRegistrados.filter(
-        function(profesional) {
+        function (profesional) {
             return profesional.id !== id;
         }
     );
@@ -457,21 +461,43 @@ function eliminarProfesional(id) {
 }
 
 
-formRegistroProfesional.addEventListener("submit", function(event) {
+
+
+// Validaciones
+const valNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/;
+const valUbicacion = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s,.\-#]+$/;
+const valTelefono = /^\d{8}$/;
+
+// Nombre: elimina todo lo que no sea letra 
+inputNombre.addEventListener("input", function () {
+    this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g, "");
+});
+
+// Ubicación: permite letras, números, espacios 
+inputUbicacion.addEventListener("input", function () {
+    this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s,.\-#]/g, "");
+});
+
+// Teléfono: solo números y máximo 8 dígitos
+inputTelefono.addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "").slice(0, 8);
+});
+
+
+
+formRegistroProfesional.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
     // Obtener datos del formulario
-    const nombre = document.getElementById("nombreRegistro").value.trim();
+    const nombre = inputNombre.value.trim();
 
     const especialidad =
         document.getElementById("especialidadRegistro").value;
 
-    const ubicacion =
-        document.getElementById("ubicacionRegistro").value.trim();
+    const ubicacion = inputUbicacion.value.trim();
 
-    const telefono =
-        document.getElementById("telefonoRegistro").value.trim();
+    const telefono = inputTelefono.value.trim();
 
     const correo =
         document.getElementById("correoRegistro").value.trim();
@@ -479,11 +505,32 @@ formRegistroProfesional.addEventListener("submit", function(event) {
     const descripcion =
         document.getElementById("descripcionRegistro").value.trim();
 
-    // Validación
+    // Validación: campos vacíos
     if (!nombre || !especialidad || !ubicacion ||
         !telefono || !correo || !descripcion) {
 
         alert("Por favor, complete todos los campos.");
+        return;
+    }
+
+    // Validación: nombre solo letras
+    if (!valNombre.test(nombre)) {
+        alert("El nombre solo puede contener letras.");
+        inputNombre.focus();
+        return;
+    }
+
+    // Validación: ubicación con letras y números
+    if (!valUbicacion.test(ubicacion)) {
+        alert("La ubicación solo puede contener letras, números y los símbolos , . - #");
+        inputUbicacion.focus();
+        return;
+    }
+
+    // Validación: teléfono de 8 dígitos
+    if (!valTelefono.test(telefono)) {
+        alert("El teléfono debe tener 8 dígitos numéricos.");
+        inputTelefono.focus();
         return;
     }
 
@@ -508,7 +555,7 @@ formRegistroProfesional.addEventListener("submit", function(event) {
     if (esEdicion) {
 
         const indice = profesionalesRegistrados.findIndex(
-            function(profesional) {
+            function (profesional) {
                 return profesional.id === idProfesionalEditando;
             }
         );
