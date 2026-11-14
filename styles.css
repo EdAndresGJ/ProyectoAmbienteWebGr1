@@ -154,24 +154,25 @@ input:focus-visible {
 }
 
 .btn-login {
-  color: #fff;
-  border: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+  color: #1b2b3a;
+  background: var(--gold);
+  border-color: var(--gold);
   font-size: 12px;
-  padding: 8px 1px;
+  font-weight: 750;
+  padding: 10px 15px;
 }
 
 .btn-login svg {
   width: 17px;
   height: 17px;
 }
-
 .btn-login:hover {
-  color: var(--gold);
+  background: var(--gold-hover);
+  border-color: var(--gold-hover);
+  color: #1b2b3a;
 }
+
+
 
 .btn-gold {
   color: #1b2b3a;
